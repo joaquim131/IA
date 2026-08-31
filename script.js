@@ -1,86 +1,88 @@
 const caixaPrincipal = document.querySelector(".caixa-principal");
 const caixaPerguntas = document.querySelector(".caixa-perguntas");
 const caixaAlternativas = document.querySelector(".caixa-alternativas");
-const caixaResultado = document.querySelector(".caixa-resultados");
-const caixaPrincipal = document.querySelector(".caixa-principal");
+const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-        enunciado: "O que você acha sobre o combate ao disperdício de água?",
+        enunciado: "Bem-vindo ao jogo O Embaixador! O destino do país está em suas mãos. Suas decisões moldarão a economia, a diplomacia e o bem-estar do povo. Você enfrentará dilemas profundos e perguntas desafiadoras ao longo dessa jornada. Prepare-se, faça suas escolhas com sabedoria e vamos ver como você se sai!",
         alternativas: [
             {
-                texto:"Eu prefiro focar em reduzir o tempo do meu próprio banho e fechar a torneira em casa.",
-                afirmacao:"Você acha que a transformação começa na disciplina dos meus próprios hábitos diários."
+                texto: "Vamos começar!",
+                afirmacao: "Essa foi sua trajetória como Embaixador:"
             },
             {
-                texto:"Eu prefiro cobrar as autoridades por melhorias no saneamento básico e contra vazamentos na cidade."
-                afirmacao:"Você acredita que a verdadeira mudança vem da infraestrutura e da cobrança por gestão publica."
+                texto: "Mas eu nem sei o que o Embaixador faz...",
+                afirmacao: "Essa foi sua trajetória como Embaixador:"
             }
-            
-            
         ]
     },
     {
-        enunciado: "O que você acha sobre a redução do uso do plástico?",
+        enunciado: "Uma nação vizinha militarizou a fronteira sem aviso prévio, alegando exercícios de rotina.",
         alternativas: [
-            
-            
             {
-                texto:"Eu prefiro carregar sempre minha própria sacola retornável e garrafa reutilizável.",
-                afirmacao: "Você assuma a responsabilidade direta pelos resíduos que gera no seu dia a dia."
+                texto: "Exige publicamente a retirada imediata das tropas, ameaçando sanções econômicas severas.",
+                afirmacao: "Ao peitar publicamente a ameaça na fronteira, seu país ganhou a reputação de destemido, embora tenha iniciado uma era de forte corrida armamentista na região."
             },
             {
-                texto:"Eu prefiro apoiar e comprar apenas de marcar que usam embalagens 100% biodegradáveis."
-                afirmacao:"Você acha que o mercado e as industrias devem ser incentivados a mudar o modelo de produção."
+                texto: "Ignora a provocação publicamente para não gerar mais pânico, mas reforça discretamente a segurança interna.",
+                afirmacao: "Ao optar pelo silêncio e reforço discreto, você evitou um pânico geral e manteve a paz diplomática, deixando os vizinhos sem saber o real poder do seu exército."
             }
-        ]    
+        ]
     },
     {
-        enunciado: "O que você acha sobre as escolhas de alimentação?",
+        enunciado: "Um recurso natural vital foi descoberto em território neutro. Uma superpotência quer exclusividade e oferece apoio financeiro ao seu país em troca do seu voto a favor deles no conselho.",
         alternativas: [
-          
             {
-                texto:  "Eu prefiro reduzir o consumo de carne e priorizar alimentos vegetais na minha dieta.",
-                afirmacao:"Você acredita que a sua saúde impacta direto na produção de alimentos guiam suas escolhas."
+                texto: "Aceita a proposta da superpotência; a economia do seu país precisa desse investimento agora.",
+                afirmacao: "Sua aliança com a superpotência encheu os cofres da nação de investimentos, mas transformou seu país em um satélite dependente das decisões dessa grande potência."
             },
             {
-                texto:"Eu prefiro comprar frutas e verduras de pequenos produtores locais e da estação."
-                afirmacao:"Você valoriza a economia da região e diminuir o trasporte de alimentos é prioridade."
-                
+                texto: "Cria uma coalizão com países menores para que juntos vocês explorem o recurso, batendo de frente com a superpotência.",
+                afirmacao: "Liderar a coalizão de países menores desafiou a hegemonia global, criando um bloco econômico independente e muito unido, embora visado por embargos."
             }
-        ]    
+        ]
     },
     {
-        enunciado: "O que você acha sobre a locomoção no dia a dia?",
+        enunciado: "Documentos confidenciais do seu governo sobre espionagem de aliados foram vazados. A comunidade internacional está indignada.",
         alternativas: [
-           
-            
             {
-                texto: "Eu prefiro andar a pé ou de bicicleta para cuidar da saúde enquanto não poluo.",
-                afirmacao:"Você acredita que o bem-estar do seu corpo caminha junto com o respeito ao meio ambiente."
+                texto: "Nega veementemente a autenticidade dos documentos e acusa os rivais de tentarem sabotar sua nação.",
+                afirmacao: "A postura agressiva de negar os vazamentos blindou o orgulho nacional internamente, mas azedou a confiança que antigos parceiros diplomáticos tinham em suas palavras."
             },
             {
-                texto:"EU prefiro utilizar transporte público ou caronas solidárias para otimizar o trânsito.",
-                afirmacao:"Você pensa no coletivo e na eficiência do espaço urbano é o caminho para cidade melhores."
+                texto: "Mantém o silêncio diplomático enquanto foca em descobrir quem foi o responsável pelo vazamento.",
+                afirmacao: "O silêncio calculado sobre a espionagem fez a poeira baixar sem grandes escândalos, embora tenha deixado o mistério pairando nos bastidores internacionais."
             }
-        ]    
+        ]
     },
     {
-        enunciado: "O que você acha sobre espalhar a conscientização?",
+        enunciado: "Um país vizinho sofreu um desastre natural e milhares de refugiados estão na sua fronteira buscando abrigo, mas seu país passa por uma recessão.",
         alternativas: [
-            
-            
             {
-                texto:"Eu prefiro dar exemplo em silêncio através das minhas ações práticas dentro de casa.",
-                afirmacao:"As atitudes valem mais do que palavras e inspiram quem está ao meu redor naturalmente."
-            }
+                texto: "Abre as fronteiras totalmente e redireciona fundos públicos para criar abrigos e assistência médica.",
+                afirmacao: "A abertura total das fronteiras para os refugiados foi um marco histórico de empatia que quebrou a economia a curto prazo, mas garantiu cidadãos extremamente leais no futuro."
+            },
             {
-                texto:"Eu prefiro debater o assunto na internet e compartilhar informações educativas com meus amigos."
-                afirmacao:"A informação é uma ferramenta poderosa para despertar a consciêcia de muitas pessoas ao mesmo tempo."
+                texto: "Permite a entrada apenas de quem tem laços familiares no país e pede ajuda financeira internacional para lidar com o restante.",
+                afirmacao: "A restrição controlada nas fronteiras protegeu a frágil economia interna, mas gerou duras críticas de organizações de direitos humanos globais."
             }
-        ]    
+        ]
     },
+    {
+        enunciado: "Seu maior aliado histórico pede que você assine um tratado militar que praticamente obriga seu país a entrar em guerra caso eles sejam atacados.",
+        alternativas: [
+            {
+                texto: "Propõe uma contraproposta: apoio logístico e diplomático em caso de guerra, mas sem envio de tropas.",
+                afirmacao: "A contraproposta logística garantiu que nenhum soldado seu morresse por guerras alheias, consolidando sua nação como uma estrategista focada na autodefesa."
+            },
+            {
+                texto: "Assina o tratado imediatamente; a lealdade aos velhos aliados é o que mantém seu país seguro.",
+                afirmacao: "Ao assinar o tratado militar de lealdade irrestrita, seu país garantiu um escudo de proteção indestrutível, mas atrelou seu futuro diretamente aos conflitos do seu aliado."
+            }
+        ]
+    }
 ];
 
 let atual = 0;

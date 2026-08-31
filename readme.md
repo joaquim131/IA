@@ -1,0 +1,1 @@
+Bem-vindo ao jogo O Embaixador! O destino do país está em suas mãos. Suas decisões moldarão a economia, a diplomacia e o bem-estar do povo. Você enfrentará dilemas profundos e perguntas desafiadoras ao longo dessa jornada. Prepare-se, faça suas escolhas com sabedoria e vamos ver como você se sai!
