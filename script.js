@@ -115,8 +115,7 @@ const perguntas = [
                 texto: "Assina o tratado imediatamente; a lealdade aos velhos aliados é o que mantém seu país seguro.",
                 afirmacao: [
                     "Ao assinar o tratado militar de lealdade irrestrita, seu país garantiu um escudo de proteção indestrutível, mas atrelou seu futuro diretamente aos conflitos do seu aliado.",
-                    "A aliança fortaleceu sua posição internacional e aumentou a confiança entre os dois países, mas qualquer guerra envolvendo seu aliado agora poderia arrastar sua nação para o conflito."
-                    
+                    "A aliança fortaleceu sua posição internacional e aumentou a confiança entre os dois países, mas qualquer guerra envolvendo seu aliado agora poderia arrastar sua nação para o conflito."]
             }
         ]
     }
@@ -147,7 +146,7 @@ function mostraAlternativas(){
 }
 
 function respostaSelecionada(opcaoSelecionada) {
-    const afirmacoes = opcaoSelecionada.afirmacao;
+    const afirmacoes = aleatorio(opcaoSelecionada.afirmacao);
     historiaFinal += afirmacoes + " ";
     atual++;
     mostraPergunta();
@@ -157,6 +156,11 @@ function mostraResultado() {
     caixaPerguntas.textContent = "Em 2049...";
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
+}
+
+function aleatorio(lista){
+    const posicao = Math.floor(Math.random()*lista.length);
+    return lista[posicao];
 }
 
 mostraPergunta();
